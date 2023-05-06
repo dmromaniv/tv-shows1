@@ -1,0 +1,18 @@
+.input {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  width: 40%;
+
+  border: none;
+  border-radius: 30px;
+
+  &:hover {
+    box-shadow: 0px 0px 4px 1px rgba(248, 196, 128, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(248, 196, 128);
+  }
+}
