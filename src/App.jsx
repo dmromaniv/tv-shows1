@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path={routes.tvShows} element={<TvShowsPage />} />
         <Route path={routes.details} element={<DetailsPage />} />
-        <Route path="*" element={<Navigate to={routes.home} replace />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
