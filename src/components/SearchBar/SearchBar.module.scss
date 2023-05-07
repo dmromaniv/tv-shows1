@@ -1,18 +1,28 @@
+@import "../../stylesheet/_vars";
+
+// .labelText {
+//   display: block;
+// }
+
 .input {
-  display: block;
-  margin: 0 auto;
-  padding: 5px 10px;
   width: 40%;
+  margin: 10px auto 0;
+  padding: 5px 10px;
 
   border: none;
   border-radius: 30px;
 
-  &:hover {
-    box-shadow: 0px 0px 4px 1px rgba(248, 196, 128, 0.6);
+  &:hover:not(:focus) {
+    box-shadow: 0px 0px 4px 1px $boxShadowCl;
   }
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid rgb(248, 196, 128);
+    border-bottom: 1px solid $borderCl;
+  }
+
+  @media screen and (max-width: $tabletWidth) {
+    width: 100%;
+    max-width: 320px;
   }
 }

@@ -1,10 +1,16 @@
+@import "../../stylesheet/_vars";
+
 .list {
   display: flex;
-  gap: 15px;
-
-  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px 15px;
 }
 
 .item {
-  width: 200px;
+  flex-basis: calc((100% - 60px) / 5);
+
+  &:hover {
+    box-shadow: $boxShadowCl;
+  }
 }
