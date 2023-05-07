@@ -7,10 +7,8 @@ import store from "./redux/store.js";
 import App from "./App.jsx";
 import "./index.scss";
 
-const basename = window.location.pathname;
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename={basename}>
+  <BrowserRouter>
     <Provider store={store}>
       <React.StrictMode>
         <App />
