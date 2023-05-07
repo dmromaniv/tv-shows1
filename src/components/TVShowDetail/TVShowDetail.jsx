@@ -5,7 +5,6 @@ import parse from "html-react-parser";
 
 import { fetchTVShowById } from "@/services/tvmazeAPI";
 import { selectTvShows } from "@/redux/selectors";
-import { routes } from "@/helpers/routes";
 
 import Error from "../Error/";
 import Loader from "../Loader";
@@ -44,9 +43,6 @@ function TVShowDetail() {
     return (
       <>
         <Error />
-        <Link className={styles.homeLink} to={routes.home}>
-          Go to the home page
-        </Link>
       </>
     );
   }
