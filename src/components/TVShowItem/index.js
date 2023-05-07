@@ -1,1 +1,1 @@
-export { default } from "./TvShowItem";
+export { default } from "./TVShowItem";
