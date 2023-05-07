@@ -4,7 +4,13 @@ import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/tv-shows/",
+  root: "./",
+  build: {
+    outDir: "dist",
+  },
+  server: {
+    host: true,
+  },
   plugins: [react()],
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
