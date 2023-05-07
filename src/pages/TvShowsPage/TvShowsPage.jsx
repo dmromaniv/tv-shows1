@@ -4,7 +4,7 @@ import { selectLoadingStatus } from "@/redux/selectors";
 import Header from "@/components/Header";
 import Loader from "@/components/Loader";
 import TvShowList from "@/components/TvShowList";
-import styles from "./TVShows.module.scss";
+import styles from "./TvShows.module.scss";
 
 function TvShowsPage() {
   const isLoading = useSelector(selectLoadingStatus);
