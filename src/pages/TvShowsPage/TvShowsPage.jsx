@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 
-import Header from "../../components/Header/Header";
-import Loader from "../../components/Loader/Loader";
-import TVShowList from "../../components/TVShowList/TVShowList";
-
+import { selectLoadingStatus } from "@/redux/selectors";
+import Header from "@/components/Header";
+import Loader from "@/components/Loader";
+import TvShowList from "@/components/TvShowList";
 import styles from "./TVShows.module.scss";
 
-function TVShows() {
-  const isLoading = useSelector((state) => state.isLoading);
+function TvShowsPage() {
+  const isLoading = useSelector(selectLoadingStatus);
   return (
     <>
       <Header />
@@ -17,11 +17,11 @@ function TVShows() {
         </div>
       ) : (
         <div className={styles.listWrapper}>
-          <TVShowList />
+          <TvShowList />
         </div>
       )}
     </>
   );
 }
 
-export default TVShows;
+export default TvShowsPage;

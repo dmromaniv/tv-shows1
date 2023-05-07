@@ -1,4 +1,4 @@
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar";
 import styles from "./Header.module.scss";
 
 function Header() {

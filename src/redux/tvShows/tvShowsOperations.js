@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { fetchTVShowData } from "../../services/tvmazeAPI";
+import { fetchTVShowData } from "@/services/tvmazeAPI";
 
 export const getTVShows = createAsyncThunk(
   "tvShows/getTVShows",

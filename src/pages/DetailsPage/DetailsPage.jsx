@@ -1,4 +1,4 @@
-import TVShowDetail from "../components/TVShowDetail/TVShowDetail";
+import TVShowDetail from "@/components/TVShowDetail";
 
 function Details() {
   return (

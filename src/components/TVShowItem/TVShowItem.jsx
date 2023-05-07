@@ -1,6 +1,7 @@
-import styles from "./TVShowItem.module.scss";
+import styles from "./TvShowItem.module.scss";
 
-function TVShowItem({ name, rating, image }) {
+/* eslint-disable */
+function TvShowItem({ name, rating, image }) {
   return (
     <div className={styles.card}>
       <img
@@ -21,4 +22,4 @@ function TVShowItem({ name, rating, image }) {
   );
 }
 
-export default TVShowItem;
+export default TvShowItem;

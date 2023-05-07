@@ -1,15 +1,16 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import TVShowItem from "../TVShowItem/TVShowItem";
-import styles from "./TVShowList.module.scss";
+import { selectTvShows } from "@/redux/selectors";
+import TvShowItem from "../TvShowItem";
+import styles from "./TvShowList.module.scss";
 import "animate.css";
 
-function TVShowList() {
-  const tvShowsData = useSelector((state) => state.tvShowsData);
+function TvShowList() {
+  const tvShowsData = useSelector(selectTvShows);
 
   if (!tvShowsData) {
-    return <p className={styles.tipText}>Type the show's name</p>;
+    return <p className={styles.tipText}>Type the shows name</p>;
   }
 
   return tvShowsData.length !== 0 ? (
@@ -17,7 +18,7 @@ function TVShowList() {
       {tvShowsData.map(({ show }) => (
         <li className={styles.item} key={show.id}>
           <Link to={`/details/${show.id}`}>
-            <TVShowItem {...show} />
+            <TvShowItem {...show} />
           </Link>
         </li>
       ))}
@@ -27,4 +28,4 @@ function TVShowList() {
   );
 }
 
-export default TVShowList;
+export default TvShowList;

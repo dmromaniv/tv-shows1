@@ -1,16 +1,16 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import { routes } from "./utils/routes";
-import TVShows from "./pages/TVShows/TVShows";
-import Details from "./pages/Details";
+import { routes } from "./helpers/routes";
+import TvShowsPage from "./pages/TvShowsPage";
+import DetailsPage from "./pages/DetailsPage";
 import "./App.scss";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path={routes.tvShows} element={<TVShows />} />
-        <Route path={routes.details} element={<Details />} />
+        <Route path={routes.tvShows} element={<TvShowsPage />} />
+        <Route path={routes.details} element={<DetailsPage />} />
         <Route path="*" element={<Navigate to={routes.home} replace />} />
       </Routes>
     </>

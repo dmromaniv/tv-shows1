@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { getTVShows } from "../../redux/tvShows/tvShowsOperations";
+import { getTVShows } from "@/redux/tvShows/tvShowsOperations";
+import { useDebounce } from "@/helpers/hooks";
 import styles from "./SearchBar.module.scss";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
+  const debouncedSearchQuery = useDebounce(query, 500);
 
   useEffect(() => {
-    if (query.length >= 2) {
-      dispatch(getTVShows(query));
+    if (debouncedSearchQuery.length >= 2 && debouncedSearchQuery) {
+      dispatch(getTVShows(debouncedSearchQuery));
     }
-  }, [query, dispatch]);
+  }, [debouncedSearchQuery, dispatch]);
 
   function handleInputChange(event) {
     setQuery(event.target.value);
