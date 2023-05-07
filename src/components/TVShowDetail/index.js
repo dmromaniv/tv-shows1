@@ -1,1 +1,1 @@
-export { default } from "./TvShowDetail";
+export { default } from "./TVShowDetail";

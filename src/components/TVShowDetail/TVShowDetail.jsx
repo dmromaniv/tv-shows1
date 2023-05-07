@@ -9,7 +9,7 @@ import { routes } from "@/helpers/routes";
 
 import Error from "../Error/";
 import Loader from "../Loader";
-import styles from "./TvShowDetail.module.scss";
+import styles from "./TVShowDetail.module.scss";
 import "animate.css";
 
 function TVShowDetail() {
