@@ -30,7 +30,6 @@ function TVShowDetail() {
           setTvShowInfo(response.data);
           setErrorStatus(false);
         } catch (error) {
-          console.log(error.message);
           setErrorStatus(true);
         } finally {
           setLoadingStatus(false);
