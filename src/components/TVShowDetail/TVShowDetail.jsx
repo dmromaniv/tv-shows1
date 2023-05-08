@@ -119,7 +119,11 @@ function TVShowDetail() {
                     <span className={styles.scheduleDays}>
                       {schedule.days.join(", ")}
                     </span>
-                    <span className={styles.scheduleTime}>{schedule.time}</span>
+                    {schedule.time && (
+                      <span className={styles.scheduleTime}>
+                        {schedule.time}
+                      </span>
+                    )}
                   </>
                 ) : (
                   "no info"
